@@ -1,0 +1,10 @@
+<div class="container">
+  <%= simple_form_for(task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :details %>
+    <% if !task.new_record? %>
+      <%= f.input :completed %>
+    <% end %>
+    <%= f.submit :class => 'btn btn-primary'%>
+  <% end %>
+</div>
